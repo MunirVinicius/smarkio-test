@@ -24,7 +24,7 @@ Create database smarkio;
 
 2) Vamos usar o banco criado:
 ```sql
-use database smarkio;
+use smarkio;
 ```
 
 3) Crie essa tabela:
