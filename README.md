@@ -31,10 +31,8 @@ use smarkio;
 
 ```sql
 create table comments(
-  id int NOT NULL AUTO_INCREMENT,
   txt text,
-  audio varchar(30),
-  PRIMARY KEY(id)  
+  audio varchar(30)
 )
 ```
 
