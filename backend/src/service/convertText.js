@@ -29,7 +29,7 @@ const convert = (txt,callback) => {
       console.log('Saved!');    
     })
     const dbaudio = `${nameAudio}.wav`
-    db.create('', txt, dbaudio)
+    db.create(txt, dbaudio)
     callback(dbaudio)
     console.log('audio.wav written with a corrected wav header');
   })
