@@ -8,7 +8,7 @@ Express
 
 Pug Template Engine
 
-Mysql Database
+Mysql 5.7 (utilize essa versão para evitar erros de conexão)
 
 ## :calling: API Utilizada: 
 [IBM Text-to-speech](https://www.ibm.com/br-pt/cloud/watson-text-to-speech)
