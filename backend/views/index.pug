@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    link(rel="stylesheet", href="css/style.css")
+</head>
+<body>
+    <main class="container">
+        <div>
+        <form>
+            <textarea name="text" id="text" cols="30" rows="10" placeholder="Digite o texto para ser convertido em audio"></textarea>
+            <button>Converter</button>
+            <p id="message"></p>
+        </form>
+        </div>
+        <div id="comments">
+            <h1>Audios</h1>
+            each audio in audios
+                p= audio.txt
+                <audio controls>
+                    <source src="/audios/#{audio.audio}" type="audio/wav">
+                </audio>
+        </div>
+    </main>
+    script(src="/js/script.js") 
+</body>
+</html>
