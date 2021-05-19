@@ -24,29 +24,11 @@ function read(){
             }
             else{
                 const results = rows;
-                // console.log(rows)
                 resolve(results);
             }
         });
     })    
 }
-
-
-
-
-// function read(){
-//     connection.query('SELECT * FROM comments', function(error,rows, fields){
-//         if(error){
-//              console.log('Error in the query')
-//         }
-//         else{
-//             const data = rows;
-//             return data;
-//         }
-//     });
-// }
-
-read()
 
 function create(id,txt, audio){
     connection.query(`INSERT INTO comments SET ?`,{id, txt, audio} ,  function (error, results, fields) {
