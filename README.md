@@ -17,13 +17,19 @@ Mysql Database
 Suba o seu servidor Mysql.
 
 ### Rode os seguintes comandos:
-1) Create database smarkio;
+1) Vamos criar o banco de dados:
+```sql Create database smarkio;
+Create database smarkio;
+```
 
-2) Use database smarkio;
+2) Vamos usar o banco criado:
+```sql
+use database smarkio;
+```
 
 3) Crie essa tabela:
 
-```ruby
+```sql
 create table comments(
   id int NOT NULL AUTO_INCREMENT,
   txt text,
@@ -34,18 +40,23 @@ create table comments(
 
 Com o banco de dados criado, clone esse repositório.
 
-```ruby
-Abra o terminal na pasta backend e digite o comando: "npm install"
+Abra o terminal na pasta backend e digite o comando a seguir para baixar as dependencias do projeto:
+```node
+ npm install
 ```
 
 Va até o arquivo db.js na pasta src, e altere os dados da constante connection para os configurados por você no seu dispositivo.
 
 Crie uma conta gratuita na ibm cloud, e coloque os seus dados em convertText.js na pasta services, 
 
-altere da apikey para a sua key, e o valor de serviceUrl para o mostrado no seu perfil da ibm cloud.
-```ruby
-Escreva no terminal dentro da pasta backend "node src/app.js"
+altere a apikey para a sua key, e o valor de serviceUrl para o mostrado no seu perfil da ibm cloud.
+
+Escreva no terminal dentro da pasta backend:
+```node
+node src/app.js
 ```
+
+Agora só acessar https://localhost:3000 e começar a converter texto para áudio.
 
 Isso é tudo :smiley:
 
