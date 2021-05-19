@@ -29,7 +29,8 @@ const convert = (txt,callback) => {
       console.log('Saved!');    
     })
     const dbaudio = `${nameAudio}.wav`
-    db.create(txt, dbaudio)
+    const randomid = parseInt(crypto.randomBytes(4).toString('hex'), 16);
+    db.create(randomid,txt, dbaudio)
     callback(dbaudio)
     console.log('audio.wav written with a corrected wav header');
   })
