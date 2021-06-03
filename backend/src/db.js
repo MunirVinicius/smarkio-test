@@ -30,7 +30,7 @@ function read(){
 function create(txt, audio){
     connection.query(`INSERT INTO comments SET ?`,{txt, audio} ,  function (error, results, fields) {
         if(!error){
-             console.log('Error in the insert')
+             return error
         }
     });
 }

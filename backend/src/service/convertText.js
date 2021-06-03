@@ -19,22 +19,19 @@ const convert = (txt,callback) => {
 
   textToSpeech.synthesize(params).then(response => {
     const audio = response.result;
-    console.log("sucesso");
     return textToSpeech.repairWavHeaderStream(audio);
   })
   .then(repairedFile => {
     let nameAudio = crypto.randomBytes(11).toString('hex');
     fs.writeFileSync(`${__dirname}/../../public/audios/${nameAudio}.wav`, repairedFile, function(err){
       if (err) throw err;
-      console.log('Saved!');    
     })
     const dbaudio = `${nameAudio}.wav`
     db.create(txt, dbaudio)
     callback(dbaudio)
-    console.log('audio.wav written with a corrected wav header');
   })
   .catch(err => {
-    console.log(err);
+    return err;
   });
 }
 
