@@ -7,7 +7,7 @@ const db = require('../db');
 const convert = (txt,callback) => {
 
   const textToSpeech = new TextToSpeechV1({
-    authenticator: new IamAuthenticator({apikey: "jl_zlcK9N4yjDSjTCv8-amh9cd6PoDloyFW7Z_x-61R-" }),
+    authenticator: new IamAuthenticator({apikey: "your api key here :)" }),
     serviceUrl: 'https://api.us-east.text-to-speech.watson.cloud.ibm.com'
   });
 
